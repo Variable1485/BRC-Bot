@@ -13,7 +13,7 @@ for (const file of commandFiles) {
 }
 
  client.once("ready", () => { 
-        client.user.setStatus("dnd");
+        client.user.setStatus("idle");
         client.user.setActivity('V1.1.9 ', { type: "PLAYING"})
     })
 
