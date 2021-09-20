@@ -13,8 +13,8 @@ for (const file of commandFiles) {
 }
 
  client.once("ready", () => { 
-        client.user.setStatus("online");
-        client.user.setActivity('My prefix is "!" ', { type: "PLAYING"})
+        client.user.setStatus("dnd");
+        client.user.setActivity('V1.1.9 ', { type: "PLAYING"})
     })
 
 client.on('interactionCreate', async interaction => {
