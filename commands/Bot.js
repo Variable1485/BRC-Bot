@@ -2,10 +2,10 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('help')
-		.setDescription('Shows the help section')
+		.setName('bot')
+		.setDescription('Shows info about the bot')
 		,
 	async execute(interaction) {
-		interaction.reply(`https://embedl.ink/e/k02fnh3z`);
+		interaction.reply(`https://embedl.ink/e/8fz02gj5`);
 },
 };

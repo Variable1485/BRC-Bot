@@ -14,7 +14,7 @@ for (const file of commandFiles) {
 
  client.once("ready", () => { 
         client.user.setStatus("dnd");
-        client.user.setActivity('V1.1.9 ', { type: "PLAYING"})
+        client.user.setActivity('V2.0.0, By sans#0003 ', { type: "PLAYING"})
     })
 
 client.on('interactionCreate', async interaction => {
@@ -28,7 +28,7 @@ client.on('interactionCreate', async interaction => {
 		await command.execute(interaction);
 	} catch (error) {
 		console.error(error);
-		return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+		return interaction.reply({ content: 'There was an error while executing this command, try again later.', ephemeral: true });
 	}
 });
 
