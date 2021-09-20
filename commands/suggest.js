@@ -1,11 +1,36 @@
-client.on('message', msg => {    //This runs when a message is sent.
-const args = msg.content.slice(prefix.length).split(' ');  //Get the arguments
-const command = args.shift().toLowerCase();  //Making the command non case-sensitive
+﻿const { RichEmbed } = require("discord.js");
 
+module.exports = {
+    name: "suggest",
+  category: "main",
+  usage: "<message>",
+    description: "Suggest game related stuff",
+    run: async (bot, message, args) => {
+    message.delete()
+    // reasoning definition
+    let suggestion = args.join(" ");
+    if (!suggestion)
+      return message.channel
+        .send(`Please provide a suggestion!`)
+        .then(m => m.delete(15000));
 
-if (command === 'suggest'){   //if command is suggest
-const channel = msg.guild.channels.find(ch => ch.name === 'game-suggestions');  //finds the channel named suggestions 
-
-channel.send('Suggestion:\n ' + args.join(' '))  //Sends the arguments
-}     //Closes the if (command === 'suggest'){ 
-});   //Closes the client.on('message',msg => {
+    // grab reports channel
+    let sChannel = message.guild.channels.find(x => x.name === "game-suggestions");
+      if(!sChannel) return message.channel.send("You didnt have channel with name `game-suggestions`")
+    // send to reports channel and add tick or cross
+    message.channel 
+      .send("Your suggestion has been filled to the staff team. Thank you!")
+      .then(m => m.delete(15000));
+    let suggestembed = new RichEmbed()
+      .setFooter(bot.user.username, bot.user.displayAvatarURL)
+      .setTimestamp()
+      .addField(`New Suggestion from:`, `**${message.author.tag}**`)
+      .addField(`Suggestion:`, `${suggestion}\n**Its your choice!**`)
+      .setColor('#ff2052');
+    sChannel.send(suggestembed).then(async msg => {
+      await msg.react("✅");
+      await msg.react("❌");
+    });
+  }
+};
+ 
