@@ -14,7 +14,7 @@ for (const file of commandFiles) {
 
  client.once("ready", () => { 
         client.user.setStatus("dnd");
-        client.user.setActivity('V2.0.1, By sans#0003, dm him if a bug is found. ', { type: "PLAYING"})
+        client.user.setActivity('V2.0.2, By sans#0003, dm him if a bug is found. ', { type: "PLAYING"})
     })
 
 client.on('interactionCreate', async interaction => {
