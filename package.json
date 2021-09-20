@@ -2,7 +2,7 @@
   "name": "firstbot",
   "version": "1.0.0",
    "engines": {
-    "node": "14.x",
+    "node": "14.x"},
   "description": "This bot is a test bot and is currently being made.",
   "main": "index.js",
   "scripts": {
