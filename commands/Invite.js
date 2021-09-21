@@ -2,7 +2,7 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('Invite')
+		.setName('invite')
 		.setDescription('Gives you the bots invite link!')
 		,
 	async execute(interaction) {
