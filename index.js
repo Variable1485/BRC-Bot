@@ -1,6 +1,6 @@
 const fs = require('fs');
 const { Client, Collection, Intents } = require('discord.js');
-const { token } = require('./config.json');
+// const { token } = require('./config.json');
 
 const client = new Client({  intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_VOICE_STATES, Intents.FLAGS.GUILD_MEMBERS]  });
 
@@ -14,7 +14,7 @@ for (const file of commandFiles) {
 
  client.once("ready", () => { 
         client.user.setStatus("dnd");
-        client.user.setActivity('V2.0.2, By sans#0003, dm him if a bug is found. ', { type: "PLAYING"})
+        client.user.setActivity('V2.0.3, By sans#0003, dm him if a bug is found. ', { type: "PLAYING"})
     })
 
 client.on('interactionCreate', async interaction => {
@@ -32,4 +32,4 @@ client.on('interactionCreate', async interaction => {
 	}
 });
 
-client.login(token);
+client.login(process.env.BRC_TOKEN);
