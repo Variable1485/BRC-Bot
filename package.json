@@ -1,8 +1,9 @@
 {
   "name": "brcbot",
   "version": "2.0.1",
-   "engines": {
-    "node": "16.7.0"},
+  "engines": {
+    "node": "16.7.0"
+  },
   "description": "This bot is a test bot and is currently being made.",
   "main": "index.js",
   "scripts": {
@@ -19,8 +20,5 @@
     "@discordjs/rest": "^0.1.0-canary.0",
     "discord-api-types": "^0.23.1",
     "discord.js": "^13.1.0"
-  },
-  "devDependencies": {
-    "eslint": "^7.32.0"
   }
 }
