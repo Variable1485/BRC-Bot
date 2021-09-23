@@ -8,6 +8,6 @@ module.exports = {
 			.setRequired(true)),
 	async execute(interaction) {
 	const user = interaction.options.getUser('target');
-		await interaction.reply(`Your tag: ${user.tag}\nYour id: ${user.id}\nCreated at: ${user.createdAt}`);
+	if (user) return interaction.reply(`Your tag: ${user.tag}\nYour id: ${user.id}\nCreated at: ${user.createdAt}`);
 	},
 };
