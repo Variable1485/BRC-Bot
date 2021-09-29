@@ -6,6 +6,6 @@ module.exports = {
 		.setDescription('Shows info about the bot')
 		,
 	async execute(interaction) {
-		interaction.reply(`https://embedl.ink/e/y7nqxsvq`);
+		interaction.reply(`https://embedl.ink/e/cf6qyo54`);
 },
 };
