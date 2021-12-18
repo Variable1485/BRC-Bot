@@ -6,6 +6,6 @@ module.exports = {
 		.setDescription('Shows game info')
 		,
 	async execute(interaction) {
-		interaction.reply(`https://embedl.ink/e/7prukn5a`);
+		interaction.reply(`https://embedl.ink/e/6f4u5kwh`);
 },
 };
