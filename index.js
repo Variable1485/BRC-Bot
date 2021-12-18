@@ -1,7 +1,6 @@
 const fs = require('fs');
 const { Client, Collection, Intents } = require('discord.js');
-const discord = require('discord.js');
-const client = new discord.Client();
+
 // const { token } = require('./config.json');
 
 const client = new Client({  intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_VOICE_STATES, Intents.FLAGS.GUILD_MEMBERS]  });
@@ -34,15 +33,5 @@ client.on('interactionCreate', async interaction => {
 	}
 });
 
-client.on('message', () => {
-    if (message.content === "!sendguildmessages") {
-        var guildList = client.guilds.array();
-        try {
-            guildList.forEach(guild => guild.defaultChannel.send("messageToSend"));
-        } catch (err) {
-            console.log("Could not send message to " + guild.name);
-        }
-    }
-});
 
 client.login(process.env.BRC_TOKEN);
