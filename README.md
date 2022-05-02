@@ -1,5 +1,5 @@
 # BRC-Bot
-A bot made by sans#0003
+A bot made by snas#6825
 Thank you for visiting the respiratory, and if you find any bugs please report them in issues!!!
 
 # Helpers:
