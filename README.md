@@ -7,6 +7,4 @@ SKPG-Tech helped with the making of some scripts.
 Nikothegamer helped with embeds.
 
 # Known bugs:
-1. User command has an option that currently doesn't work, any user you choose will make the bot give your information no matter what.
-2. Some commands are duplicated for no reason.
-
+1. Some commands are duplicated for no reason.
